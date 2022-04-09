@@ -1,15 +1,239 @@
+<html lang="ja">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <body>
-  <h1>アイコンクリックで各プロフィールに飛べます</h1>
-  <div class="list">
-    <img src="https://play-lh.googleusercontent.com/65gRWpXRbhKLD6ak-Eqs8A660E_NJft03eG37hFGitdYp2OyosvaxpN0ErDoz9aWfw=s180-rw" class="button" onclick="Twitter()" alt="Twitter">
-    <img src="https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc=s180-rw" class="button" onclick="YouTube()" alt="YouTube">
-    <img src="https://play-lh.googleusercontent.com/McVkTazCaveLwqoDuX_E7ayTgdK4DPbrKCGcPSIZT4b783j6HJvJYu0uxQAuzCw7BCs=s180-rw" class="button" onclick="Discord()" alt="Discord">
-    <img src="https://play-lh.googleusercontent.com/2sREY-8UpjmaLDCTztldQf6u2RGUtuyf6VT5iyX3z53JS4TdvfQlX-rNChXKgpBYMw=s180-rw" class="button" onclick="Instagram()" alt="Instagram">
-  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
+
+
+  <main>
+
+    <section id="box1" class="box" data-section-name="Top">
+      <h1>アイコンクリックで各プロフィールに飛べます</h1>
+      <div class="list">
+        <img src="https://play-lh.googleusercontent.com/65gRWpXRbhKLD6ak-Eqs8A660E_NJft03eG37hFGitdYp2OyosvaxpN0ErDoz9aWfw=s180-rw" class="button" onclick="Twitter()" alt="Twitter">
+        <img src="https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc=s180-rw" class="button" onclick="YouTube()" alt="YouTube">
+        <img src="https://play-lh.googleusercontent.com/McVkTazCaveLwqoDuX_E7ayTgdK4DPbrKCGcPSIZT4b783j6HJvJYu0uxQAuzCw7BCs=s180-rw" class="button" onclick="Discord()" alt="Discord">
+        <img src="https://play-lh.googleusercontent.com/2sREY-8UpjmaLDCTztldQf6u2RGUtuyf6VT5iyX3z53JS4TdvfQlX-rNChXKgpBYMw=s180-rw" class="button" onclick="Instagram()" alt="Instagram">
+      </div>
+    </section>
+
+    <section id="box2" class="box" data-section-name="Main">
+      <div class="sns_i">
+      <a class="twitter-timeline" width="50%" href="https://twitter.com/kairu8264?ref_src=twsrc%5Etfw" width="25%" height="100%">Tweets by kairu8264</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <iframe src="https://discord.com/widget?id=894575466386690078&theme=dark" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </div>
+      <div class="youtube_i1">
+      <iframe width="100%" height="50%"src="https://www.youtube.com/embed/-RixZs4W3PE?controls=0&amp;start=30" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="youtube_i2">
+      <iframe width="100%" height="50%" src="https://www.youtube-nocookie.com/embed/tcRvI1rSokk?start=30" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <a href="#Top" class="btn btn-gradient"><span>トップへ戻る</span></a>
+    </section>
+  </main>
 </body>
 <title>ContactUS(かいるんのリンク集)</title>
 <style type="text/css">
+  @font-face {
+  font-family: 'MyFont';
+  src: url(./Fonts/Corporate-Logo-Rounded.ttf) format("truetype");
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'MyFont';
+  box-sizing: border-box;
+  overflow-y: scroll; /* All browsers without overlaying scrollbars */
+  -webkit-text-size-adjust: 100%; /* iOS 8+ */
+}
+.pagination {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1em;
+  z-index: 10;
+  list-style: none;
+}
+
+.youtube_i1 {
+  width: 50%;
+  height: 90%;
+  right: 0%;
+  position: absolute;
+  display: flex;
+}
+
+.youtube_i1 iframe {
+  top: 0;
+  left: 0;
+}
+
+.youtube_i2 {
+  width: 50%;
+  top: 40%;
+  height: 50%;
+  right: 0%;
+  position: absolute;
+  display: flex;
+}
+
+.youtube_i2 iframe {
+  top: 0;
+  left: 0;
+  height: 90%;
+}
+.sns_i {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+}
+
+.sns_i iframe {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.topmodoru {
+  position: absolute;
+  display: flex;
+  width: 50%;
+  height: 20%;
+  bottom: 0;
+  right: 0;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 5rem;
+  line-height: 1.5;
+  position: absolute;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  padding-top: 1.2%;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+  width: 50%;
+  height: 20%;
+  bottom: 0;
+  right: 0;
+}
+
+a.btn-gradient {
+  font-weight: normal;
+
+  color: #fff;
+  border-radius: 0;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(40%, #ff3cac),
+    to(#562b7c)
+  );
+  background-image: -webkit-linear-gradient(left, #ff3cac 40%, #562b7c 100%);
+  background-image: linear-gradient(90deg, #ff3cac 40%, #562b7c 100%);
+}
+
+a.btn-gradient:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  content: "";
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ff3cac),
+    color-stop(#562b7c),
+    to(#2b86c5)
+  );
+
+  background-image: -webkit-linear-gradient(left, #ff3cac, #562b7c, #2b86c5);
+
+  background-image: linear-gradient(90deg, #ff3cac, #562b7c, #2b86c5);
+}
+
+a.btn-gradient span {
+  position: relative;
+  z-index: 1;
+}
+
+a.btn-gradient:hover {
+  color: #fff;
+}
+
+a.btn-gradient:hover:after {
+  opacity: 0;
+}
+
+.pagination a {
+  display: block;
+  height: 20px;
+  margin-bottom: 5px;
+  color: #98fb98;
+  position: relative;
+  padding: 4px;
+}
+
+.pagination a.active:after {
+  box-shadow: inset 0 0 0 5px;
+}
+
+.pagination a .hover-text {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  padding-right: 15px;
+}
+
+.pagination a:hover .hover-text {
+  opacity: 1;
+}
+
+.pagination a:after {
+  -webkit-transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease;
+  width: 10px;
+  height: 10px;
+  display: block;
+  border: 1px solid;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 3px;
+  bottom: 0;
+}
     .button {
       border-radius: 50%;
       cursor       : pointer;
@@ -23,16 +247,19 @@
 body {
   margin: 0;
   padding: 0;
-  	background:linear-gradient(45deg, #3bade3,#9844b7,#44ea76);/*グラデーションを定義*/
+  height: 100%;
+  width: 100%;
+  background:linear-gradient(45deg, #3bade3,#9844b7,#44ea76);/*グラデーションを定義*/
 	background-size: 200% 200%;/*サイズを大きくひきのばす*/
 	animation: bggradient 20s ease infinite;
+  background-attachment: fixed;
 }
 .list {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-30%) translateX(-50%);
+  -webkit-transform: translateY(-30%) translateX(-50%);
 }
 h1 {
   text-align: center;
@@ -52,11 +279,6 @@ h1 {
    # Global selectors
    # ================================================================= */
 
-html {
-  box-sizing: border-box;
-  overflow-y: scroll; /* All browsers without overlaying scrollbars */
-  -webkit-text-size-adjust: 100%; /* iOS 8+ */
-}
 
 *,
 ::before,
@@ -103,7 +325,6 @@ figcaption,
 figure,
 footer,
 header,
-main,
 menu,
 nav,
 section,
@@ -312,7 +533,11 @@ legend {
 img {
   border-style: none; /* Remove border when inside `a` element in IE 8/9/10 */
 }
-
+.box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 /* Add the correct vertical alignment in Chrome, Firefox, and Opera */
 progress {
   vertical-align: baseline;
@@ -378,7 +603,7 @@ video {
 }
 </style>
 <script>
-    function YouTube() {
+  function YouTube() {
       setTimeout(YouTube_click, 500);
     }
     function YouTube_click() {
@@ -402,4 +627,60 @@ video {
     function Instagram_click() {
       location.href = "https://www.instagram.com/kairu8264";
     }
-    </script>
+    function Top() {
+      location.href = "#Top";
+    }
+</script>
+<script>
+  $.scrollify({
+    section : ".box",//1ページスクロールさせたいエリアクラス名
+    scrollbars:"false",//スクロールバー表示・非表示設定
+    interstitialSection : "#header,#footer",//ヘッダーフッターを認識し、1ページスクロールさせず表示されるように設定
+    easing: "swing", // 他にもlinearやeaseOutExpoといったjQueryのeasing指定可能
+    scrollSpeed: 800, // スクロール時の速度
+    
+    //以下、ページネーション設定
+    before:function(i,panels) {
+    var ref = panels[i].attr("data-section-name");
+    $(".pagination .active").removeClass("active");
+    $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+    },
+    afterRender:function() {
+    var pagination = "<ul class=\"pagination\">";
+    var activeClass = "";
+    $(".box").each(function(i) {//1ページスクロールさせたいエリアクラス名を指定
+    activeClass = "";
+    if(i===$.scrollify.currentIndex()) {
+    activeClass = "active";
+    }
+    pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+    });
+    pagination += "</ul>";
+    
+    $("#box1").append(pagination);//はじめのエリアにページネーションを表示
+    $(".pagination a").on("click",$.scrollify.move);
+    }
+    
+});
+const setFillHeight = () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+  
+  // ここからリサイズの対応
+  let vw = window.innerWidth;
+  window.addEventListener('resize', () => {
+    if (vw === window.innerWidth) {
+    // 画面の横幅にサイズ変動がないので処理を終える
+      return;
+    }
+  
+    // 画面の横幅のサイズ変動があった時のみ高さを再計算する
+    vw = window.innerWidth;
+    setFillHeight();
+  });
+  
+  // 実行
+  setFillHeight();
+</script>
+</html>
