@@ -1,17 +1,18 @@
 <head>
-<meta charset="utf-8">
-<div id="loader">
-	  <div class="mojang">
-		<img src="img/Gorilla.png">
-	  </div>
-	  <div id="mojang--container">
-		<div id="mojang--container-body">
-		  <span id="mojang--load"></span>
-		</div>
-	  </div>
+  <meta charset="utf-8">
+  <div id="loader">
+    <div class="mojang">
+      <img src="img/Gorilla.png">
+    </div>
+    <div id="mojang--container">
+      <div id="mojang--container-body">
+        <span id="mojang--load"></span>
+      </div>
+    </div>
   </div>
-  </head>
-
+</head>
+<body onload="rc();">
+</body>
 <style>
   body {
   margin: 0;
@@ -26,9 +27,6 @@
   background-color: #ffd700;
   z-index: 100;
 }
-<body onload="firstscript();"></body>
-
-/* 読み込み完了後に「loaded」を付与する */
 
 #loader.loaded {
   animation: fadeOut 0.5s forwards;
@@ -56,7 +54,7 @@
 }
 
 #mojang--container-body {
-  border: solid 2px #fff;
+  border: solid 2px #000;
 }
 
 #mojang--container:before, #mojang--load:before, #mojang--load:after {
@@ -99,6 +97,7 @@
   100% {
     width: 698px;
   }
+}
 
 #container {
   position: fixed;
@@ -109,14 +108,13 @@
   z-index: -100;
   overflow: hidden;
 }
-  </style>
+</style>
 
 <script>
   function rc() {
       setTimeout(rc_ok, 5000);
-    }
-    function rc_ok() {
+  }
+  function rc_ok() {
       location.href = "minecraft://?addExternalServer=ゴリラ鯖|nisshi.yuniharu.com:4304";
-    }
-	
-	</script>
+  }
+</script>
