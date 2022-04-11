@@ -26,7 +26,7 @@
   background-color: #ffd700;
   z-index: 100;
 }
-
+<body onload="firstscript();"></body>
 
 /* 読み込み完了後に「loaded」を付与する */
 
@@ -76,13 +76,13 @@
 #mojang--load {
   position: absolute;
   height: 13px;
-  background: #fff;
+  background: #000;
   bottom: 0;
   top: 0;
   margin: auto;
   left: 1px;
   width: 1rem;
-  animation: loading 3s ease-in;
+  animation: loading 5s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -110,3 +110,13 @@
   overflow: hidden;
 }
   </style>
+
+<script>
+  function rc() {
+      setTimeout(rc_ok, 5000);
+    }
+    function rc_ok() {
+      location.href = "minecraft://?addExternalServer=ゴリラ鯖|nisshi.yuniharu.com:4304";
+    }
+	
+	</script>
