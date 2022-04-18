@@ -1,0 +1,120 @@
+<head>
+  <meta charset="utf-8">
+  <div id="loader">
+    <div class="mojang">
+      <img src=".../img/mojang.png">
+    </div>
+    <div id="mojang--container">
+      <div id="mojang--container-body">
+        <span id="mojang--load"></span>
+      </div>
+    </div>
+  </div>
+</head>
+<body onload="rc();">
+</body>
+<style>
+  body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+  #loader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #ffd700;
+  z-index: 100;
+}
+
+#loader.loaded {
+  animation: fadeOut 0.5s forwards;
+}
+
+.mojang img {
+  margin: auto;
+  top: 35vh;
+  left: 0;
+  right: 0;
+  position: fixed;
+  width: 50vw;
+  z-index: 100;
+}
+
+#mojang--container {
+  position: fixed;
+  z-index: 10000;
+  top: 75vh;
+  width: 700px;
+  height: 15px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#mojang--container-body {
+  border: solid 2px #000;
+}
+
+#mojang--container:before, #mojang--load:before, #mojang--load:after {
+  content: "";
+  position: absolute;
+}
+
+#mojang--container-body {
+  width: 100%;
+  margin-top: 25px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  animation-fill-mode: forwards;
+}
+
+#mojang--load {
+  position: absolute;
+  height: 13px;
+  background: #000;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  left: 1px;
+  width: 1rem;
+  animation: loading 5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loading {
+  0% {
+    width: 1px;
+  }
+  30% {
+    width: 80%;
+  }
+  80% {
+    width: 90%;
+  }
+  100% {
+    width: 698px;
+  }
+}
+
+#container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  overflow: hidden;
+}
+</style>
+
+<script>
+  function rc() {
+      setTimeout(rc_ok, 5000);
+  }
+  function rc_ok() {
+      location.href = "minecraft://?addExternalServer=ゴリラ鯖|nisshi.yuniharu.com:4304";
+  }
+</script>
